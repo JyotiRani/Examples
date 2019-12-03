@@ -1,0 +1,84 @@
+{
+  "name": "reviews",
+  "plural": "reviews",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "RVW_REVIEWS"
+  },
+  "properties": {
+    "reviewId": {
+      "type": "number",
+      "required": false,
+	  "id" : true,
+      "dashdb": {
+        "columnName": "ID"
+      },
+      "isArray": false
+    },
+	"rating": {
+      "type": "number",
+      "required": true,
+      "dashdb": {
+        "columnName": "RATING"
+      },
+      "isArray": false
+    },
+    "remarks": {
+      "type": "string",
+      "required": false,
+      "dashdb": {
+        "columnName": "REMARKS"
+      },
+      "isArray": false
+    },
+    "requestorName": {
+      "type": "string",
+      "required": false,
+      "dashdb": {
+        "columnName": "REQUESTORNAME"
+      },
+      "isArray": false
+    },
+    "requestorId": {
+      "type": "number",
+      "required": true,
+      "dashdb": {
+        "columnName": "REQUESTORID"
+      },
+      "isArray": false
+    },	
+    "workItemId": {
+      "type": "number",
+      "required": true,	  
+      "dashdb": {
+        "columnName": "WORKITEMID"
+      },
+      "isArray": false
+    },
+    "workItemType": {
+      "type": "string",
+      "required": true,	  
+      "dashdb": {
+        "columnName": "WORKITEMTYPE"
+      },
+      "isArray": false
+    },	
+    "createdDate": {
+      "type": "date",
+      "required": false,	  
+      "dashdb": {
+        "columnName": "CREATEDDATE"
+      },
+      "isArray": false
+    }	
+	},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
